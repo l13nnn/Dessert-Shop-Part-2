@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "RedHatText";
+    background-color:  hsl(20, 50%, 98%);
+}
+
+@font-face {
+    font-family: "RedHatText";
+    src: url('../assets/fonts/RedHatText-VariableFont_wght.ttf') format('truetype-variations');
+  }
+
+  .App {
+    margin: 2rem;
+  }
+
+img {
+    border-radius: 10px;
+    width: 80%;
+}

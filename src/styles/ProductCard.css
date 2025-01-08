@@ -1,0 +1,53 @@
+.card h6 {
+    color: hsl(7, 20%, 60%)
+}
+
+.card h5 {
+    color: hsl(14, 86%, 42%)
+}
+
+.card button {
+    background-color: hsl(0, 0%, 100%);
+    color: rgb(2,2,2);
+    font-size: 1 rem;
+    font-weight: 500;
+    border: solid 1px hsl(0, 0%, 77%);
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    position: relative;
+    top: -2rem;
+    left: 1rem;
+}
+
+.card button:hover {
+    color: hsl(14, 86%, 42%);
+    border: solid 1px hsl(14, 86%, 42%);
+}
+
+.buttons {
+    color: rgb(2,2,2);
+    font-size: 1 rem;
+    font-weight: 500;
+    border: solid 1px hsl(0, 0%, 77%);
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+    top: -2rem;
+    left: 1.5rem;
+    width: 60%;
+    justify-content: space-between;
+    background-color: hsl(14, 86%, 42%);
+}
+
+.minus, .plus {
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+}
+
+.qty {
+    background-color: hsl(14, 86%, 42%);
+    color: hsl(0, 0%, 100%);
+}

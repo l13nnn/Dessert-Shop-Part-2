@@ -1,0 +1,155 @@
+.cart-container {
+    margin: 1rem auto;
+    position: absolute;
+    right: 5rem;
+    top: -3rem;
+    text-align: left;
+    padding: 5rem;
+    background-color: hsl(0, 0%, 100%);
+  }
+
+.cart-container h2 {
+    color: hsl(14, 86%, 42%);
+    position: relative;
+    left: -4rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-container span {
+    font-weight: bold;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-container h5 {
+    font-weight: bold;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-container svg {
+    position: relative;
+    left: 20px;
+    top: 1rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-container h6 {
+    position: relative;
+    left: -1rem;
+    top: 1rem;
+    color: hsl(14, 25%, 72%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-container h1 {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(0, 0%, 0%);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.cart-item {
+    border-bottom: 0.5px solid  hsl(14, 25%, 72%);
+    padding: 5px 0;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-item button {
+    position: relative;
+    border: none;
+    border-radius: 100px;
+    padding: 5px;
+    color: hsl(14, 25%, 72%);
+    cursor: pointer;
+    left: 12rem;
+    top: -2rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-product button {
+    position: relative;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    top: 20px;
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+    cursor: pointer;
+}
+
+.cart-product h6 {
+    font-weight: lighter;
+    margin-top: 10px;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.cart-item svg {
+    position: relative;
+    left: 20px;
+    cursor: pointer;
+    background-color: hsl(0, 0%, 100%);
+}
+
+@media screen and (max-width: 600px) {
+    .cart-container {
+      position: relative;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 5rem;
+      margin: 2rem;
+    }
+} 
+
+.quantity {
+    color: hsl(14, 86%, 42%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.itemPrice {
+    color: hsl(14, 25%, 72%);
+    background-color: hsl(0, 0%, 100%);
+}
+
+.totalPrice {
+    background-color: hsl(0, 0%, 100%);
+    color: hsl(7, 20%, 60%);
+}
+
+.total-item {
+    position: relative;
+    justify-content: space-between;
+    top: 0rem;
+    text-align: center;
+}
+
+.remove svg {
+    position: relative;
+    left: 20px;
+    top: 1rem;
+    background-color: hsl(0, 0%, 100%);
+}
+
+.carbon-neutral svg{
+    position: relative;
+    top: 0.3rem;
+    left: -0.1rem;
+}
+
+.carbon-neutral h5 {
+    position: relative;
+    top: 3rem;
+    font-weight: lighter;
+}
+
+.carbon-neutral button {
+    position: relative;
+    border: none;
+    border-radius: 20px;
+    padding: 10px;
+    width: 100%;
+    top: 45px;
+    background-color: hsl(14, 86%, 42%);
+    color: white;
+    cursor: pointer;
+}
