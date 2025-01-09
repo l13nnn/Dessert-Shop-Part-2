@@ -1,10 +1,15 @@
 import React from 'react';
 import '../styles/Notification.css';
 
-const Notification = ({ isOpen, cartData, onClose }) => {
+const Notification = ({ isOpen, items, setCartItems, setIsNotificationOpen }) => {
     if (!isOpen) {
         return null;
     }
+
+    const handleCLose = () => {
+        setCartItems([]);
+        setIsNotificationOpen(false);
+    };
 
     return (
         <div className="notification-overlay">
@@ -19,15 +24,14 @@ const Notification = ({ isOpen, cartData, onClose }) => {
                 </div>
                 <div className="notification-body">
                     <ul>
-                        {cartData.map((item, index) => (
+                        {items.map((item, index) => (
                             <li key={index}>
                                 <img src={item.image.desktop} alt={item.name} />
                                 <div className="item-info">
                                     <div className="item-name">
                                         <h6>{item.name}</h6>
-                                        <p>{item.quantity}x &nbsp; ${item.price.toFixed(2)}</p> 
+                                        <p>{item.quantity}x &nbsp; <span>${item.price.toFixed(2)}</span></p> 
                                     </div>                                  
-                                    
                                     <div className="item-cost">
                                         <p>${(item.quantity * item.price).toFixed(2)}</p>
                                     </div>
@@ -35,7 +39,7 @@ const Notification = ({ isOpen, cartData, onClose }) => {
                             </li>
                         ))}
                     </ul>
-                    <button onClick={onClose}>Start New Order</button>
+                    <button onClick={handleCLose}>Start New Order</button>
                 </div>
             </div>
             </div>

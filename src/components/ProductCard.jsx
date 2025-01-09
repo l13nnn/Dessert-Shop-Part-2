@@ -1,8 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/ProductCard.css';
 
-function ProductCard({ product, onUpdateCart }) {
+function ProductCard({ product, onUpdateCart, cartItems }) {
   const [quantity, setQuantity] = useState(0);
+
+  useEffect(() => {
+    const cartItem = cartItems.find((item) => item.name === product.name);
+    if (!cartItem) {
+      setQuantity(0);
+    }
+  }, [cartItems, product.name]);
 
   const handleIncrement = () => {
     const newQuantity = quantity + 1;

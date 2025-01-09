@@ -2,25 +2,20 @@ import React, { useState } from "react"
 import Notification from "./Notification";
 import "../styles/cart.css"
 
-function Cart({ items, onRemoveFromCart }) {
-    const [cartData, setCartData] = useState([]);
+function Cart({ items, onRemoveFromCart, setCartItems }) {
     const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
     const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     const confirmOrder = () => {
-        setCartData(items);
         setIsNotificationOpen(true);
     };
 
-    const startNewOrder = () => {
-        setCartData([]);
-        setIsNotificationOpen(false);
-    };
+    
 
     return (
         <div className="cart-container">
-                        <Notification isOpen={isNotificationOpen} cartData={cartData} onClose={() => setIsNotificationOpen(false)} />
+                        <Notification isOpen={isNotificationOpen} items={items} setCartItems={setCartItems} setIsNotificationOpen={() => setIsNotificationOpen(false)} />
             <h2>Your Cart ({items.length})</h2>
             {items.length === 0 ? (
                 <div>
