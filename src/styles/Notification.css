@@ -17,7 +17,7 @@
     padding: 20px;
     max-width: 80%;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    width: 20rem;
+    width: 22rem;
 }
 
 .notification-header h2 {
@@ -46,6 +46,7 @@
     object-fit: cover;
     border-radius: 4px;
     margin-right: 15px;
+    margin-bottom: 10px;
 }
 
 .notification-body p {
@@ -60,6 +61,7 @@
     margin-bottom: 15px;
     display: flex;
     align-items: center;
+    border-bottom: 1px solid hsl(7, 20%, 60%);
     .item-info{
         display: flex;
         width: 100%;
@@ -94,3 +96,14 @@
     display: flex;
     flex-direction: column;
 }
+
+.orders-total {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .fixed-total {
+    font-weight: bold;
+    font-size: 20px;
+  }

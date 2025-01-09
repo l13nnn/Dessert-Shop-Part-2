@@ -34,7 +34,7 @@
     background-color: hsl(0, 0%, 100%);
 }
 
-.cart-container > h6 {
+.cart-container h6 {
     position: relative;
     left: -1rem;
     top: 1rem;
@@ -79,7 +79,7 @@
     cursor: pointer;
 }
 
-.cart-product h6 {
+.cart-product > h6 {
     font-weight: lighter;
     margin-top: 10px;
     background-color: hsl(0, 0%, 100%);

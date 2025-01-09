@@ -1,4 +1,4 @@
-.card h6 {
+.card > h6 {
     color: hsl(7, 20%, 60%)
 }
 

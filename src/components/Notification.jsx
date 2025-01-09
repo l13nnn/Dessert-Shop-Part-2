@@ -6,6 +6,11 @@ const Notification = ({ isOpen, items, setCartItems, setIsNotificationOpen }) =>
         return null;
     }
 
+    const total = items.reduce(
+        (sum, item) => sum + item.price * item.quantity,
+        0
+      );
+
     const handleCLose = () => {
         setCartItems([]);
         setIsNotificationOpen(false);
@@ -29,7 +34,7 @@ const Notification = ({ isOpen, items, setCartItems, setIsNotificationOpen }) =>
                                 <img src={item.image.desktop} alt={item.name} />
                                 <div className="item-info">
                                     <div className="item-name">
-                                        <h6>{item.name}</h6>
+                                        <h5>{item.name}</h5>
                                         <p> <span className="quantity">{item.quantity}x</span> &nbsp; <span className="price-value">${item.price.toFixed(2)}</span></p> 
                                     </div>                                  
                                     <div className="item-cost">
@@ -39,6 +44,7 @@ const Notification = ({ isOpen, items, setCartItems, setIsNotificationOpen }) =>
                             </li>
                         ))}
                     </ul>
+                    <div className="orders-total">Order Total <span className="fixed-total">${total.toFixed(2)}</span></div>
                     <button onClick={handleCLose}>Start New Order</button>
                 </div>
             </div>
