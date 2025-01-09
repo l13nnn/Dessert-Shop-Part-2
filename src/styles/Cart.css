@@ -2,16 +2,18 @@
     margin: 1rem auto;
     position: absolute;
     right: 5rem;
-    top: -3rem;
+    top: 1rem;
     text-align: left;
-    padding: 5rem;
+    padding: 60px;
     background-color: hsl(0, 0%, 100%);
+    border-radius: 20px;
   }
 
-.cart-container h2 {
+.cart-container > h2 {
     color: hsl(14, 86%, 42%);
     position: relative;
-    left: -4rem;
+    left: -2rem;
+    top: -1.5rem;
     background-color: hsl(0, 0%, 100%);
 }
 
@@ -25,7 +27,7 @@
     background-color: hsl(0, 0%, 100%);
 }
 
-.cart-container svg {
+.cart-container > svg {
     position: relative;
     left: 20px;
     top: 1rem;
@@ -83,7 +85,7 @@
     background-color: hsl(0, 0%, 100%);
 }
 
-.cart-item svg {
+.cart-item > svg {
     position: relative;
     left: 20px;
     cursor: pointer;
@@ -123,14 +125,19 @@
     text-align: center;
 }
 
-.remove svg {
+.total-item p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.remove > svg {
     position: relative;
     left: 20px;
     top: 1rem;
     background-color: hsl(0, 0%, 100%);
 }
 
-.carbon-neutral svg{
+.carbon-neutral > svg{
     position: relative;
     top: 0.3rem;
     left: -0.1rem;

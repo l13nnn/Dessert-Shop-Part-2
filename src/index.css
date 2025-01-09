@@ -3,7 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "RedHatText";
-    background-color:  hsl(20, 50%, 98%);
+}
+
+body {
+    background-color: hsl(20, 50%, 98%); 
 }
 
 @font-face {

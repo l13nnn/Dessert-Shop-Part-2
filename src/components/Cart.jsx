@@ -1,11 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
+import Notification from "./Notification";
 import "../styles/cart.css"
 
 function Cart({ items, onRemoveFromCart }) {
+    const [cartData, setCartData] = useState([]);
+    const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+
     const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+
+    const confirmOrder = () => {
+        setCartData(items);
+        setIsNotificationOpen(true);
+    };
+
+    const startNewOrder = () => {
+        setCartData([]);
+        setIsNotificationOpen(false);
+    };
 
     return (
         <div className="cart-container">
+                        <Notification isOpen={isNotificationOpen} cartData={cartData} onClose={() => setIsNotificationOpen(false)} />
             <h2>Your Cart ({items.length})</h2>
             {items.length === 0 ? (
                 <div>
@@ -32,7 +47,7 @@ function Cart({ items, onRemoveFromCart }) {
                         <div className="total-item">
                             <p>Order Total <b>${total.toFixed(2)}</b></p>
                         </div>
-                        <button>Confirm Order</button>
+                        <button onClick={confirmOrder}>Confirm Order</button>
                     </div>
                 </div>
             )}
