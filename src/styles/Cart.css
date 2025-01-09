@@ -17,7 +17,7 @@
     background-color: hsl(0, 0%, 100%);
 }
 
-.cart-container span {
+.cart-container > span {
     font-weight: bold;
     background-color: hsl(0, 0%, 100%);
 }
