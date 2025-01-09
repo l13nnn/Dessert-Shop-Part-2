@@ -34,7 +34,7 @@
     background-color: hsl(0, 0%, 100%);
 }
 
-.cart-container h6 {
+.cart-container > h6 {
     position: relative;
     left: -1rem;
     top: 1rem;

@@ -23,12 +23,14 @@ const Notification = ({ isOpen, cartData, onClose }) => {
                             <li key={index}>
                                 <img src={item.image.desktop} alt={item.name} />
                                 <div className="item-info">
-                                    <div className="item-name"></div>
-                                    <h6>{item.name}</h6>
-                                    <p>Quantity: {item.quantity}</p>
+                                    <div className="item-name">
+                                        <h6>{item.name}</h6>
+                                        <p>{item.quantity}x &nbsp; ${item.price.toFixed(2)}</p> 
+                                    </div>                                  
+                                    
+                                    <div className="item-cost">
+                                        <p>${(item.quantity * item.price).toFixed(2)}</p>
                                     </div>
-                                <div className="item-price">
-                                    <p>${item.price.toFixed(2)}</p>
                                 </div>
                             </li>
                         ))}
