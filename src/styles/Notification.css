@@ -64,6 +64,13 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
+        .item-details .quantity {
+            color: hsl(14, 86%, 42%);
+         
+        }
+        .price-value {
+            color: hsl(7, 20%, 60%);
+           }
     }
 }
 
